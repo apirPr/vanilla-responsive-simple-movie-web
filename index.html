@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Film</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <main id="main-content">
+        <div class="search-field">
+          <div class="search">
+            <input type="text" id="search-input" placeholder="Cari.." />
+            <button id="search-btn">search</button>
+          </div>
+          <div class="filter">
+            <label class="checkbox-container"
+              >Terapkan Filter
+              <input type="checkbox" id="use-filter" />
+              <span class="checkmark"></span>
+            </label>
+            <div class="sort-by">
+              <label for="year">Urutkan Berdasarkan</label>
+              <select name="sort" id="sort-by">
+                <option value="title-ascending">Judul (A-Z)</option>
+                <option value="title-descending">Judul (Z-A)</option>
+                <option value="year-ascending">Tahun (0-9)</option>
+                <option value="year-descending">Tahun (9-0)</option>
+              </select>
+            </div>
+            <div class="filter-by-year">
+              <label for="year">Tahun</label>
+              <input
+                type="number"
+                minimum="1800"
+                maximum="2023"
+                value=""
+                id="year"
+              />
+            </div>
+            <div class="filter-by-type">
+              <label for="type">Tipe &nbsp&nbsp </label>
+              <select name="type" id="type" id="type">
+                <option value="all">All</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="movies-container"></div>
+      </main>
+      <footer id="footer">
+        <span>HTML | CSS | JS</span>
+        <div class="info">
+          <a href="https://github.com/apirPr/vanilla-responsive-simple-movie-web" target="_blank">
+            <span>Github</span>
+          </a>
+        </div>
+        <span class="name">Echa Apriliyanto</span>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
