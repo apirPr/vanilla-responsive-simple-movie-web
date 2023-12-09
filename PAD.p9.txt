@@ -1,10 +1,9 @@
-explode = np.zeros(len(df.groupby('Drug').Age.mean().values))
-explode[df.groupby('Drug').Age.mean().values.argmax()] = 0.1
+explode = np.zeros(len(df.groupby('Drug').Age.count().values))
+explode[df.groupby('Drug').Age.count().values.argmax()] = 0.1
 
 fig, ax = plt.subplots()
-ax.pie(df.groupby('Drug').Age.mean().values, labels=df.Drug.unique()
-, 
-       autopct='%1.1f%%', 
+ax.pie(df.groupby('Drug').Age.count().values, labels=df.Drug.unique(), 
+       autopct='%1.1f%%', startangle=90,
        shadow=True, explode=explode)
 
 ax.set_title("Drug Berdasarkan Age")
